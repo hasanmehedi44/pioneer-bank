@@ -23,15 +23,25 @@
 
 
 
+    <div id="transactionArea">
+        <h1 class="text-center">transaction Area.</h1>
+    </div>
+
+
+
 
 
 
     <script>
 
+
+        // Login button control
         const loginButton = document.getElementById('login');
         loginButton.addEventListener('click', function () {
             const loginArea = document.getElementById('login-area');
-            loginArea.style.display = 'none'
+            loginArea.style.display = 'none';
+            const transaction_Area = document.getElementById('transactionArea');
+            transaction_Area.style.display = 'block';
         })
 
     </script>

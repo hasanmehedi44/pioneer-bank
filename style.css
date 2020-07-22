@@ -14,3 +14,7 @@ body {
     padding: 50px;
 
 }
+
+#transactionArea {
+    display: none;
+}
