@@ -30,7 +30,7 @@
             <div class="col-md-4 ml-auto">
                 <div class="deposit status">
                 <h5>Deposit</h5>
-                <h2>$0</h2> 
+                <h2>$ <span id="currentDeposit">0</span> </h2> 
                 </div>
             </div>
             <div class="col-md-4 ml-auto">
@@ -93,6 +93,13 @@
         depositButton.addEventListener('click', function(event) {
         const depositAmount = document.getElementById('depositAmount').value;
         const depositNumber = parseFloat(depositAmount);
+
+        const currentDeposit = document.getElementById('currentDeposit').innerText;
+        const currentDepositNumber = parseFloat(currentDeposit);
+        const totalDeposit = currentDepositNumber + depositNumber;
+        document.getElementById('currentDeposit').innerText = totalDeposit;
+        document.getElementById('depositAmount').value = "";
+
         })
     </script>
 </body>
